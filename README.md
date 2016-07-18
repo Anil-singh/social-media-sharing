@@ -57,7 +57,7 @@
         PHP 5.5
 
 ### Social Media configurations - include/config.php
-    Create an app on social media using developer account and replace following config contants
+    Create an app on social media using developer account and replace following config constants
     /* Facebook */
     define( 'FACEBOOK_APP_ID', '');
     define( 'FACEBOOK_APP_SECRET', '');
