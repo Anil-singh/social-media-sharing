@@ -1,5 +1,5 @@
 ## Social Media Sharing 
-        Sharing of site contents on social meadia Facebook,Linkedin,Twitter
+        Sharing of site contents on social meadia Facebook,Linkedin,Twitter with one time login and storing access token.
 
 ### Share on Facebook
     $facebook    = new Facebook( $config ); 
