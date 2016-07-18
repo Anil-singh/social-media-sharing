@@ -1,5 +1,5 @@
 ## Social Media Sharing 
-        Social Media sharing enable a site admin to share it's site contents on social meadia Facebook,Linkedin,Twitter
+        Social Media sharing site contents on social meadia Facebook,Linkedin,Twitter
 
 ### Share on Facebook
     $facebook    = new Facebook( $config ); 
