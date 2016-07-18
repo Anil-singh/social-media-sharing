@@ -1,5 +1,5 @@
 ## Social Media Sharing 
-        Social Media sharing enable a site admin to share it's site contents on social meadia Facebook,Linkedin,Twitter
+        Sharing of site contents on social meadia Facebook,Linkedin,Twitter with one time login and storing access token.
 
 ### Share on Facebook
     $facebook    = new Facebook( $config ); 
@@ -69,8 +69,8 @@
 ### Dependecies
         PHP 5.5
 
-### Social Media configurations - config.php
-    Create app on social media using developer account and replace following config contants
+### Social Media configurations - include/config.php
+    Create an app on social media using developer account and replace following config constants
     /* Facebook */
     define( 'FACEBOOK_APP_ID', '');
     define( 'FACEBOOK_APP_SECRET', '');
