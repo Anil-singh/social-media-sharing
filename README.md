@@ -2,22 +2,34 @@
         Sharing of site contents on social meadia Facebook,Linkedin,Twitter with one time login and storing access token.
 
 ### Share on Facebook
-    $facebook    = new Facebook( $config ); 
+    /* creating object of Facebook Class */
+	$facebook    = new Facebook( $config ); 
 
+    /* var intialization */
     $accessToken = "";
-    if($accessToken == "" )
-        $accessToken = $this->facebook->getAccessToken();
 
+    /* Checking if user is already authenticated by Facebook and access token saved in session */
+    if(isset($_SESSION['accessToken'])){
+        $accessToken = $_SESSION['accessToken'];
+    }
+    /* Getting access token if it returns from facebook as callback */
+    if($accessToken == "" ){
+        /* Getting access token */
+        $accessToken = $this->facebook->getAccessToken();
+        /* Storing access token in session for next time sharing */
+        $_SESSION['accessToken'] = $accessToken;
+    }
+    
     if ($accessToken) {
-        $message              = "What to share"; // message to share
-        $link                 = "link to be share"; // sharing link
-        $picture              = "picture url to be share";  // picture url to be share
+        $message              = "What to share"; // Message to share
+        $link                 = "link to be share"; // Link to share
+        $picture              = "picture url to be share";	// Picture url to share
+        /*Sharing post on facebook */
         $post_id = $this->facebook->sharePost( $accessToken, $link, $message, $picture );
     } else {
+        /* Sending user on facebook for authentication */
         redirect($this->facebook->loginUrl());
-    }
-
-### Share on Twitter
+    }### Share on Twitter
     $config = array(
         'consumerKey' => TWITTER_CONSUMER_KEY,
         'consumerSecret' => TWITTER_CONSUMER_SECRET,
