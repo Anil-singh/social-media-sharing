@@ -1,5 +1,6 @@
 ## Social Media Sharing 
-        Sharing of site contents on social meadia Facebook,Linkedin,Twitter with one time login and storing access token.
+        Sharing of site contents on social meadia Facebook,Linkedin,Twitter with one time login 
+        and storing access token.
 
 ### Share on Facebook
     /* creating object of Facebook Class */
